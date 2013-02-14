@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+    <head>
+        <title>twitter投稿画面</title>
+        <meta charset="UTF-8">
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <SCRIPT language="JavaScript">
+        <!--
+        //140字制限
+        function check(){
+            var num = document.tweet_form.tweet_text.value.length;
+            if(num > 140){
+                window.alert(num+"文字です。140字以内にしてください。");
+                return false;
+            }
+        }
+        //-->
+        </SCRIPT>
+    </head>
+    <body>
+        <h1>twitterに投稿する</h1>
+        <form action="tweetpost.php" method="post" name="tweet_form" onSubmit="return check()">
+            ▼コメント
+            <br />
+            <textarea name="tweet_text" cols=40 rows=5 ></textarea>
+            <br />
+            <input type="submit" name="submit_tweet" value="投稿する"/>
+        </form>
+    </body>
+</html>
